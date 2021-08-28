@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Converter</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="mystyle.css">       
+</head>
+
+<body>
+
+    <div>
+        <div align="center" class="fond">
+            <div style="width:1000px;">
+
+                <div class="style_prevu_kit" style="background-color:#cb2025;"></div>
+                <div class="style_prevu_kit" style="background-color:#f8b334;"></div>
+                <div class="style_prevu_kit" style="background-color:#97bf0d;"></div>
+                <div class="style_prevu_kit" style="background-color:#00a096;"></div>
+                <div class="style_prevu_kit" style="background-color:#93a6a8;"></div>
+
+
+                <div
+                    style=" padding:5px; color:#b5e6e3; font-weight:300; font-size:30px; font-family:'Roboto';padding-top:20px;">
+                    <font style="font-weight:400;">Converter</font>
+                </div>
+
+                <form action="" onsubmit="AfterClickOnButton(); return false">
+                    <div>
+                        <div>
+                            <h1
+                                style=" padding:5px; color:#b5e6e3; font-weight:300; font-size:22px; font-family:'Roboto';padding-top:20px;">
+                                <font style="font-weight:400;"> Please Enter the Temperature you'd like to
+                                    Convert
+                            </h1>
+                        </div>
+                        <span>
+                            <input type="number" name="Temperature" id="input" placeholder="0">
+                            <select id="options" name="Temperature">
+                                <option value="cel">Celsius</option>
+                                <option value="fah">Fahrenheit</option>
+                            </select>
+                        </span>
+
+                        <div class="btn">
+                            <button id="button">Convert</button>
+                            <!--<input type="submit" id="button"name="submit">-->
+                        </div>
+                        <div>
+                            <h1
+                                style=" padding:5px; color:#b5e6e3; font-weight:300; font-size:30px; font-family:'Roboto';padding-top:20px;">
+                                <font style="font-weight:400;" id="result">
+                            </h1>
+                        </div>
+                    </div>
+                </form><br>
+                <div>
+                    <hr class="new4"></hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // ##### TEMPRATURE CONVERTER #### //
+        const button = document.getElementById("button");
+        const select = document.getElementById("select");
+
+        // call function to perform task..
+        const AfterClickOnButton = () => {
+            const input = document.getElementById("input").value
+            //console.log(input);
+
+            const selectOptions = document.getElementById("options");
+            const getOptions = options.options[selectOptions.selectedIndex].value;
+            //console.log(getOptions);
+
+
+            // formula to convert Celsius to Fahrenheit.
+            const CelToFah = (userInput) => {
+                const Fahrenheit = Math.round((userInput * 9 / 5) + 32);
+                return Fahrenheit;
+                console.log(Fahrenheit);
+            }
+
+            // formula to convert Fahrenheit to Celsius. 
+            const FahToCel = (userInput) => {
+                const Celsius = Math.round((userInput - 32) * 5 / 9);
+                return Celsius;
+                console.log(Celsius);
+            }
+
+            let result;
+
+            if (getOptions == "cel") {
+                result = CelToFah(input)
+                const ShowResult = document.getElementById("result");
+                ShowResult.innerHTML = `${result}°Fahrenheit`;
+            } else {
+                result = FahToCel(input)
+                const ShowResult = document.getElementById("result");
+                ShowResult.innerHTML = `${result} °Celsius`;
+            }
+        }
+
+
+        // ##### AGE CALCULATOR #### //
+
+    </script>
+
+</body>
+</html>

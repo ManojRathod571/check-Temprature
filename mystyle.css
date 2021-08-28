@@ -1,0 +1,89 @@
+.fond {
+    position: absolute; 
+    padding-top: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00506b;
+    height: auto;
+}
+
+.style_prevu_kit {
+    display: inline-block;
+    border: 0;
+    width: 150px;
+    height: 170px;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+
+}
+
+.style_prevu_kit:hover {
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 1.100ms ease-in;
+    transform: scale(1.1);
+}
+
+#input {
+    width: 130px;
+    padding: 11px 7px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#options {
+    width: auto;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+}
+
+#button {
+    background-color: #90b803;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto';
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#button:hover {
+    background-color: darkblue;
+}
+
+hr.new4 {
+    border: 1px solid rgb(228, 217, 217);
+}
